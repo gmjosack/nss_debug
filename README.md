@@ -11,7 +11,6 @@ for a more complex NSS module I intended to write.
 ```
 make
 sudo make install
-
 ```
 
 ## Configuration
