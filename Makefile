@@ -1,17 +1,14 @@
 CC=gcc
 CFLAGS=-Wall -Wstrict-prototypes -Werror -fPIC
 
+LD_SONAME=-Wl,-soname,libnss_debug.so.2
 LIBRARY=libnss_debug.so.2.0
 LINKS=libnss_debug.so.2 libnss_debug.so
 
 DESTDIR=/
 PREFIX=$(DESTDIR)/usr
-BUILD=.libs
 LIBDIR=$(PREFIX)/lib
-
-LD_SONAME=-Wl,-soname,libnss_debug.so.2
-
-SOURCES = Makefile nss_debug.c LICENSE README.md
+BUILD=.libs
 
 default: build
 build: nss_debug
